@@ -33,7 +33,7 @@ class MainActivity : AppCompatActivity() {
                 binding.toolbarInclude.toolbar.visibility = View.GONE
                 binding.bottomNavigation.visibility = View.GONE
             } else {
-                binding.toolbarInclude.toolbar.visibility = View.GONE
+                binding.toolbarInclude.toolbar.visibility = View.VISIBLE
                 binding.bottomNavigation.visibility = View.VISIBLE
             }
         }
