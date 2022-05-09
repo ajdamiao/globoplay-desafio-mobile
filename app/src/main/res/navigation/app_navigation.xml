@@ -19,4 +19,9 @@
         android:name="com.example.desafioglobo.view.SplashFragment"
         android:label="fragment_splash"
         tools:layout="@layout/fragment_splash" />
+    <fragment
+        android:id="@+id/movieDetailsFragment"
+        android:name="com.example.desafioglobo.view.MovieDetailsFragment"
+        android:label="fragment_movie_details"
+        tools:layout="@layout/fragment_movie_details" />
 </navigation>

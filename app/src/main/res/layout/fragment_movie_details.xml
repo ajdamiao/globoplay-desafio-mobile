@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.MovieDetailsFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/overviewLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/full_black"
+        app:layout_constraintBottom_toTopOf="@+id/constraintLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+
+        <ImageView
+            android:id="@+id/imgMovie"
+            android:layout_width="128dp"
+            android:layout_height="128dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@tools:sample/avatars" />
+
+        <TextView
+            android:id="@+id/txtMovieTittle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/imgMovie"
+            app:layout_constraintStart_toStartOf="@+id/imgMovie"
+            app:layout_constraintTop_toBottomOf="@id/imgMovie"
+            tools:text="Titulo FIlme" />
+
+        <TextView
+            android:id="@+id/txtMovieGenre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:textColor="@color/silver"
+            app:layout_constraintEnd_toEndOf="@+id/txtMovieTittle"
+            app:layout_constraintStart_toStartOf="@+id/txtMovieTittle"
+            app:layout_constraintTop_toBottomOf="@+id/txtMovieTittle"
+            tools:text="Genero" />
+
+        <TextView
+            android:id="@+id/txtSinopsis"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="24dp"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtMovieGenre"
+            tools:text="Movie Sinopses here comes the movie sinopsis" />
+
+        <Button
+            android:id="@+id/btnWatch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:backgroundTint="@color/white"
+            android:text="Assista"
+            android:textColor="@color/black"
+            app:icon="@drawable/ic_play"
+            app:iconTint="@color/black"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/txtSinopsis"
+            app:layout_constraintTop_toBottomOf="@+id/txtSinopsis"
+            app:strokeWidth="2dp" />
+
+        <Button
+            android:id="@+id/btnMyList"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            android:backgroundTint="@color/black"
+            android:text="Minha Lista"
+            android:textColor="@color/silver"
+            android:textSize="12sp"
+            app:icon="@drawable/ic_star"
+            app:iconTint="@color/silver"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/txtSinopsis"
+            app:layout_constraintTop_toBottomOf="@+id/txtSinopsis"
+            app:strokeColor="@color/silver"
+            app:strokeWidth="2dp" />
+
+        <ImageView
+            android:id="@+id/btnBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:src="@drawable/ic_back"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/overviewLayout">
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:text="Ficha Técnica"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/labelTittle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="Título Original:"
+            android:textColor="@color/silver"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/textView2"
+            app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+        <TextView
+            android:id="@+id/txtTittle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:textColor="@color/silver"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/labelTittle"
+            app:layout_constraintStart_toEndOf="@+id/labelTittle"
+            app:layout_constraintTop_toTopOf="@+id/labelTittle"
+            tools:text="10.0" />
+
+        <TextView
+            android:id="@+id/labelGenre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Gênero:"
+            android:textColor="@color/silver"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/labelTittle"
+            app:layout_constraintTop_toBottomOf="@+id/labelTittle" />
+
+        <TextView
+            android:id="@+id/labelProduction"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Produção:"
+            android:textColor="@color/silver"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/labelGenre"
+            app:layout_constraintTop_toBottomOf="@+id/labelGenre" />
+
+        <TextView
+            android:id="@+id/txtProduction"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:textColor="@color/silver"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/labelProduction"
+            app:layout_constraintStart_toEndOf="@+id/labelProduction"
+            app:layout_constraintTop_toTopOf="@+id/labelProduction"
+            tools:text="10.0" />
+
+        <TextView
+            android:id="@+id/labelNote"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Nota:"
+            android:textColor="@color/silver"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/labelProduction"
+            app:layout_constraintTop_toBottomOf="@+id/labelProduction" />
+
+        <TextView
+            android:id="@+id/txtNote"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:textColor="@color/silver"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/labelNote"
+            app:layout_constraintStart_toEndOf="@+id/labelNote"
+            app:layout_constraintTop_toTopOf="@+id/labelNote"
+            tools:text="10.0" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
